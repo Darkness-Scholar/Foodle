@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Foodle/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/Foodle/static/js/main.3cee0dcd.chunk.js",
+    "main.js.map": "/Foodle/static/js/main.3cee0dcd.chunk.js.map",
+    "runtime-main.js": "/Foodle/static/js/runtime-main.cb77b628.js",
+    "runtime-main.js.map": "/Foodle/static/js/runtime-main.cb77b628.js.map",
+    "static/js/2.526eedb9.chunk.js": "/Foodle/static/js/2.526eedb9.chunk.js",
+    "static/js/2.526eedb9.chunk.js.map": "/Foodle/static/js/2.526eedb9.chunk.js.map",
+    "index.html": "/Foodle/index.html",
+    "precache-manifest.b7041d08879e152232af6009cbdd6972.js": "/Foodle/precache-manifest.b7041d08879e152232af6009cbdd6972.js",
+    "service-worker.js": "/Foodle/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/Foodle/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.526eedb9.chunk.js.LICENSE.txt": "/Foodle/static/js/2.526eedb9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb77b628.js",
+    "static/js/2.526eedb9.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.3cee0dcd.chunk.js"
+  ]
+}
