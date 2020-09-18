@@ -1,0 +1,317 @@
+
+import React from 'react';
+import {webData} from './Fbase';
+import * as firebase from 'firebase';
+
+
+
+function App() {
+  const pushData = () => {
+    const dataBase = firebase.database().ref('userOder');
+    dataBase.push({
+      id: 1,
+      name: 'DDDD',
+      phone: '0377154234'
+    });
+    console.log('PUSH COMPLETE');
+  }
+  return (
+    <div>
+      <div id="loading">
+        <div id="loading-center">
+          <div id="loading-center-absolute">
+            <div className="object" id="object_one" />
+            <div className="object" id="object_two" />
+            <div className="object" id="object_three" />
+            <div className="object" id="object_four" />
+            <div className="object" id="object_five" />
+            <div className="object" id="object_six" />
+            <div className="object" id="object_seven" />
+            <div className="object" id="object_eight" />
+            <div className="object" id="object_big" />
+          </div>
+        </div>
+      </div>
+      {/*End Preloader */}
+      {/* Navbar */}
+      <nav className="navbar navbar-default bootsnav no-background navbar-fixed black">
+        <div className="container">
+          {/* Start Atribute Navigation */}
+          <div className="attr-nav">
+            <ul>
+              <li className="side-menu"><a href="#"><i className="fa fa-bars" /></a></li>
+            </ul>
+          </div>
+          {/* End Atribute Navigation */}
+          {/* Start Header Navigation */}
+          <div className="navbar-header">
+            <a className="navbar-brand" href="#"><img src="https://via.placeholder.com/160x50.png" className="logo" alt="" /></a>
+          </div>
+          {/* End Header Navigation */}
+        </div>
+        {/* Start Side Menu */}
+        <div className="side">
+          <a href="#" className="close-side"><i className="fa fa-times" /></a>
+          <div className="widget">
+            <h6 className="title">Menu</h6>
+            <ul className="link">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        {/* End Side Menu */}
+      </nav>
+      {/* Header */}
+      <header id="hello">
+        {/* Container */}
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <div className="banner">
+                <h3>-Bánh mì-</h3>
+                <h1>TUNG LONE</h1>
+                <div className="inner_banner">
+                  <div className="banner_content">
+                    <p>Thơm ngon, bổ dưỡng, chất lượng cao, chắc chắn sẽ làm bạn hài lòng.</p>
+                    <p>*Ăn không ngon làm chó.</p>
+                  </div>
+                  <div className="stamp">
+                    <img src="images/stamp.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>{/* Container end */}
+        <button className="caption" onClick={() => pushData}>CLICK</button>
+      </header>{/* Header end */}
+      {/* Block Content */}
+      <section id="block">
+        <div className="container">
+          {/* First section */}
+          <div className="row">
+            <div className="col-sm-8">
+              <div className="feature">
+                <div className="shack_burger">
+                  <div className="chicken">
+                    <img src="images/chicken.png" alt="Chicken" />
+                  </div>
+                  <h2>Shack Burger </h2>
+                  <p>Black Angus beef patty topped with American cheese, tomato, lettuce, and “Shack Sauce,” served in a grilled potato bun</p>
+                </div>
+                <p className="caption">*Limited Time Only</p>
+              </div>
+            </div>
+            <div className="col-sm-4">
+              <div className="signature">
+                <div className="shape">
+                  <span className="flaticon flaticon-burger" />
+                  <p>signature</p>
+                </div>
+                <div className="signature_content">
+                  <p>It used to be a Secret but not any more! Our tribute to the King is a Cheddar Beef Patty,</p>
+                </div>
+              </div>
+            </div>
+          </div>{/* first section end */}
+          {/* Second section */}
+          <div className="row">
+            <div className="col-md-6">
+              <div className="classic">
+                <a href="/" className="classic_btn">classic</a>
+                <div className="overlay">
+                  <h3>House-ground hamburger</h3>
+                  <p>(served in a grilled rosemary focaccia).</p>
+                  <p className="overlay_content">Instead of traditional cucumber pickles, legendary chef-owner Judy Rodgers accents her burgers with thin-cut zucchini strips pickled in apple cider vinegar, mustard seeds and turmeric.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              {/* Carousel */}
+              <div id="small_carousel" className="carousel slide" data-ride="carousel">
+                {/* Indicators */}
+                <ol className="carousel-indicators">
+                  <li data-target="#small_carousel" data-slide-to={0} className="active" />
+                  <li data-target="#small_carousel" data-slide-to={1} />
+                  <li data-target="#small_carousel" data-slide-to={2} />
+                </ol>
+                <div className="carousel-caption">
+                  <h3>The Original Burger</h3>
+                  <hr />
+                  <ul className="list-unstyled nutrition">
+                    <li><a href="true"><span className="flaticon flaticon-protein" /><p>Protein - 33g</p></a></li>
+                    <li><a href="true"><span className="flaticon flaticon-carbohydrate" /><p>Carbohydrates - 46gm</p></a></li>
+                    <li><a href="true"><span className="flaticon flaticon-calories" /><p>Calories - 750 kcal</p></a></li>
+                  </ul>
+                  <div className="info_btn_shadow">
+                    <a href="true" className="info_btn">info &amp; nutrition</a>
+                  </div>
+                </div>
+                {/* carousel inner */}
+                <div className="carousel-inner" role="listbox">
+                  <div className="item active">
+                    <img src="images/small_slider_bg.jpg" alt="" />
+                  </div>
+                  <div className="item">
+                    <img src="images/small_slider_bg.jpg" alt="" />
+                  </div>
+                  <div className="item">
+                    <img src="images/small_slider_bg.jpg" alt="" />
+                  </div>
+                </div>{/* carousel inner end */}
+              </div>{/* Carousel end*/}
+            </div>
+          </div>{/* second section end */}
+          {/* Third section */}
+          {/* Carousel */}
+          <div id="carousel" className="carousel slide" data-ride="carousel">
+            {/* Indicators */}
+            <ol className="carousel-indicators">
+              <li data-target="#carousel" data-slide-to={0} className="active" />
+              <li data-target="#carousel" data-slide-to={1} />
+              <li data-target="#carousel" data-slide-to={2} />
+            </ol>
+            {/* carousel inner */}
+            <div className="carousel-inner" role="listbox">
+              <div className="item active">
+                <img src="images/large_slider_img.jpg" alt="Burger" />
+                <div className="carousel-caption">
+                  <h2>Cheddar JUnky</h2>
+                  <h3>Stuffed Burgers</h3>
+                  <p>Chef Wesley Genovart makes this over-the-top, Shake Shack–inspired burger with two thin stacked patties, thick-cut bacon, kimchi and a spicy homemade sauce.</p>
+                  <div className="info_btn_shadow">
+                    <a href="true" className="info_btn">info &amp; nutrition</a>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <img src="images/large_slider_img.jpg" alt="Burger" />
+                <div className="carousel-caption">
+                  <h2>Cheddar JUnky</h2>
+                  <h3>Stuffed Burgers</h3>
+                  <p>Chef Wesley Genovart makes this over-the-top, Shake Shack–inspired burger with two thin stacked patties, thick-cut bacon, kimchi and a spicy homemade sauce.</p>
+                  <div className="info_btn_shadow">
+                    <a href="true" className="info_btn">info &amp; nutrition</a>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <img src="images/large_slider_img.jpg" alt="Burger" />
+                <div className="carousel-caption">
+                  <h2>Cheddar JUnky</h2>
+                  <h3>Stuffed Burgers</h3>
+                  <p>Chef Wesley Genovart makes this over-the-top, Shake Shack–inspired burger with two thin stacked patties, thick-cut bacon, kimchi and a spicy homemade sauce.</p>
+                  <div className="info_btn_shadow">
+                    <a href="true" className="info_btn">info &amp; nutrition</a>
+                  </div>
+                </div>
+              </div>
+            </div>{/* carousel inner end */}
+          </div>{/* Carousel end*/}
+          {/* Forth section */}
+          <div className="row forth_sec">
+            <div className="col-sm-4">
+              <div className="menu">
+                <div className="inner_content">
+                  <span className="flaticon flaticon-burger" />
+                  <h2>menu</h2>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-4">
+              <div className="drinks">
+                <div className="inner_content">
+                  <span className="flaticon flaticon-drink" />
+                  <h2>drinks</h2>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-4">
+              <div className="sides">
+                <div className="inner_content">
+                  <span className="flaticon flaticon-food" />
+                  <h2>sides</h2>
+                </div>
+              </div>
+            </div>
+          </div>{/* forth section end */}
+        </div>
+      </section>{/* Block Content end*/}
+      {/* Lock */}
+      <section id="lock">
+        <h2>SERVING MORE THAN JUST BURGERS SINCE 1998</h2>
+        <p>Check out our opening hours and location address below.</p>
+      </section>
+      {/* Map */}
+      <div id="ourmaps" />
+      {/* Footer */}
+      <footer>
+        {/* Container */}
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-sm-4 col-xs-12 col-lg-offset-1 pull-right">
+              <div className="subscribe">
+                <h4>Subscribe now</h4>
+                <p>Subscribe to the newsletter and
+                    get some crispy stuff every week.</p>
+                <form role="form">
+                  <div className="form-group">
+                    <div className="input-group">
+                      <input type="email" className="form-control" id="em" placeholder="Enter your e-mail here" />
+                      <span className="input-group-btn">
+                        <button type="submit" className="btn send_btn">
+                          <i className="glyphicon glyphicon-send" />
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div className="col-lg-3 col-sm-4 col-xs-12 col-lg-offset-1 pull-right">
+              <div className="contact_us">
+                <h4>Contact Us</h4>
+                <a href="true">info@junkyburget.com</a>
+                <address>
+                  Jalan Awan Hijau, Taman OUG<br />
+                    58200 Kuala Lumpur <br />
+                    Malaysia <br />
+                </address>
+              </div>
+            </div>
+            <div className="col-lg-4 col-sm-4 col-xs-12 pull-right">
+              <div className="basic_info">
+                <a href="true"><img className="footer_logo" src="images/footer_logo.png" alt="Burger" /></a>
+                <ul className="list-inline social">
+                  <li><a href="true" className="fa fa-facebook" /></li>
+                  <li><a href="true" className="fa fa-twitter" /></li>
+                  <li><a href="true" className="fa fa-instagram" /></li>
+                </ul>
+                <div className="footer-copyright">
+                  <p className="wow fadeInRight" data-wow-duration="1s">
+                    Made with
+                      <i className="fa fa-heart" />
+                      by
+                      <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a> <br />
+                      2016. All Rights Reserved
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>{/* Container end */}
+      </footer>
+      {/* Footer end */}
+      {/* scroll up*/}
+      <div className="scrollup">
+        <a href="#"><i className="fa fa-chevron-up" /></a>
+      </div>
+    </div>
+  );
+}
+
+export default App;
